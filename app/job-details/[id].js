@@ -35,7 +35,7 @@ const JobDetails = () => {
                 headerShadowVisible: false,
                 headerBackVisible: false,
                 headerLeft: () => (
-                    <ScreenHeaderBtn iconUrl={icons.left} dimension='60%' handlePress={() => router.back}/>
+                    <ScreenHeaderBtn iconUrl={icons.left} dimension='60%' handlePress={() => router.back()}/>
                 ),
                 headerRight: () => (
                     <ScreenHeaderBtn iconUrl={icons.share} dimension='60%'/>
@@ -59,7 +59,7 @@ const JobDetails = () => {
                             {displayTabContent()}
                         </View>)}
                 </ScrollView>
-                <JobFooter url={data[0]?.job_goole_link ?? 'https://careers.google.com/job/results'}/>
+                <JobFooter url={data[0]?.job_google_link ?? 'https://careers.google.com/job/results'}/>
             </>
         </SafeAreaView>
     )
